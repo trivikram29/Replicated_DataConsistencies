@@ -1,0 +1,32 @@
+Replication of data is done in distributed systems to increase availability and fault tolerance. Availability and Consistency are the two properties 
+that are desirable from any data replication scheme. Most of the systems offer strong consistency and eventual consistency schemes, but there are 
+other consistency schemes that can be achieved with a trade off between performance and availability. In this project, we discuss about other consistency
+schemes, algorithms to implement them and performances of these algorithms and try to compare the different consistency schemes.
+
+Go through the Report file for more insights.
+
+To run the compiled classes, go to bin folder.
+
+Open a terminal and run the following commands:
+
+1. rmiregistry &
+2. java Clusters.BaseballCluster
+
+open terminal 2
+1. java Proxy.BaseballProxy (for strong consistency)
+
+open terminal 3
+
+1. java Clients.Client (Reading 1 key at a time, total 10 keys)
+2. java Clients.BaseballClient (Reading 2 keys at a time, Total 2 keys)
+
+To rerun the experiments terminate all three process and run again.
+
+
+To compile the code, go to the src folder and compile appropriate files
+
+javac Clients/Client.java ../Proxy/Client_Proxy_interface.java
+javac Proxy/BaseballProxy.java Clusters/Proxy_Cluster_interface.java
+javac Clusters/BaseballCluster.java
+
+and run the class files from the src directory.
